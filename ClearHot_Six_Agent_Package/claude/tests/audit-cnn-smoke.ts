@@ -1,0 +1,2 @@
+import {trainCnn,cnnRestore,KIND_OF,type Variant} from '../src/lib/cnn';
+for(const v of ['A','B','C'] as Variant[]){const m=await trainCnn(KIND_OF[v],{steps:1,batch:2,lr:0.003,seed:42,onProgress:()=>{},shouldStop:()=>false});const input=new Float32Array(64*64).fill(7500);const out=await cnnRestore(m,input,64,64,0.5);console.log(JSON.stringify({variant:v,steps:m.steps,parameters:m.params,backend:m.backend,loss:m.loss[0],all_finite:Array.from(out).every(Number.isFinite),output_len:out.length}));m.model.dispose()}
