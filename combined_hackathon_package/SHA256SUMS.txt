@@ -1,0 +1,2 @@
+e1a2e49c192eb45c7e63b27a95327bc7ffaed6bec56588a0ed6f0375bfd34f85  original_archives/hackreview.zip
+f9189450affe989ced87b3691ddc4f19e01bf9d1109cde6414b1c44381fa9d6f  original_archives/hack2ndrun.zip

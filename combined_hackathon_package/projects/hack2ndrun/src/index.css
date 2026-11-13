@@ -1,0 +1,4 @@
+@import "tailwindcss";
+
+html { background: #0a0e13; color-scheme: dark; }
+.font-mono, code, pre { font-family: "JetBrains Mono", ui-monospace, monospace; }
