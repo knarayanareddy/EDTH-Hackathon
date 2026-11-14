@@ -1,0 +1,9 @@
+# Copy and send this exact message to BOTH Claude and Argon
+
+Please independently implement the assignment in the attached `ClearHot_Independent_Implementation_Brief.zip`. Start by reading `00_START_HERE.md`, `01_IMPLEMENTATION_REQUIREMENTS.md`, the current `starting_point/` code and the independent reviews. Both agents receive exactly the same starting version, source archives and instructions; please do not rely on the other agent's output.
+
+I want a working local Mac video comparison and an actual controlled offline CNN improvement loop—not another concept, mock-up, seeded result or self-described audit. Keep the original Argos 2 as a selectable reference, preserve the other original classical methods, and let me watch the full locally stored recording. Implement training on a known-clean synthetic demonstration plus a validated import path for trusted real pairs; include checkpointing, held-out validation, human approval, model selection in the video workflow, rejection of a bad candidate and rollback. The detailed requirements specify privacy, frame identity, testing and deliverables.
+
+My approximately 180 MB recording is **not in this ZIP**, and I want it to remain on my Mac. Don't claim to have tested it. Don't use unverified adjacent frames as clean targets, silently train on the final test, label sensor counts as temperature, or state that improvement is guaranteed. For anything you cannot implement or test, clearly mark it incomplete.
+
+Return a ZIP with your full runnable updated code, exact Mac setup and offline-use instructions, tests with actual results, a two-cycle synthetic demonstration of the loop including rejection/rollback, and an honest per-requirement PASS/PARTIAL/NOT IMPLEMENTED report. Please also explain how a locally trained model is used in full-video playback.
