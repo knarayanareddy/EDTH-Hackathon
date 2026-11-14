@@ -1,0 +1,5 @@
+{
+  "_WARNING": "DEMO / TEST-ONLY thresholds. Relaxed so that the tiny synthetic demo can exercise promotion. NOT product safety evidence. With the default gates the demo candidates are expected to FAIL the thin-line retention gate (see RESULTS_AND_LIMITATIONS.md).",
+  "line_retention_range": [0.05, 1.3],
+  "target_retention_range": [0.45, 1.3]
+}

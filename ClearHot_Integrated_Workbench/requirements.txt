@@ -1,0 +1,4 @@
+# Tested pins (Linux x86_64, Python 3.11.2): see RESULTS_AND_LIMITATIONS.md. macOS Apple Silicon: PyPI wheels exist for these versions
+# but were NOT tested here. Intel Macs: PyTorch >=2.3 has no macOS x86_64 wheels, so this pin is unsupported there.
+numpy==2.4.6
+torch==2.5.1

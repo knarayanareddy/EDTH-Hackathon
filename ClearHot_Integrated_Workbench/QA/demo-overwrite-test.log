@@ -1,0 +1,2 @@
+Refusing to overwrite existing path: /home/user/clearhot_existing_demo_sentinel. Choose a new directory.
+demo overwrite check: rejected existing directory (exit 1), sentinel intact

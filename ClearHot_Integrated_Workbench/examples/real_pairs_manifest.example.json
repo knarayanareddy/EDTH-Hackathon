@@ -1,0 +1,34 @@
+{
+  "schema": "clearhot-real-pairs-v1",
+  "dataset_name": "my-curated-pairs-v1",
+  "decoder": {"width": 640, "height": 512, "header_bytes": 0, "shift": 0, "little_endian": true, "bits": 14},
+  "attestation": {
+    "attested": true,
+    "reviewer": "your-name-or-pseudonym",
+    "statement": "I attest that each target is a trusted reference of the same scene, spatially aligned to its input and expressed in the same 14-bit count domain (e.g. a long-exposure/multi-frame average from a stationary camera that I verified). It is not an adjacent noisy frame, a blurred frame or a model prediction."
+  },
+  "recordings": [
+    {
+      "recording_id": "session-A",
+      "split": "train",
+      "input":  {"path": "/ABSOLUTE/OR/RELATIVE/path/to/noisy_A.u16",  "sha256": "FULL-FILE-SHA256-OF-INPUT"},
+      "target": {"path": "/path/to/reference_A.u16", "sha256": "FULL-FILE-SHA256-OF-TARGET",
+                 "target_kind": "trusted_external_reference", "same_count_domain": true, "alignment_attested": true,
+                 "description": "how this reference was produced and verified"},
+      "pairs": [{"frame_index": 0, "target_frame_index": 0}, {"frame_index": 40, "target_frame_index": 0}]
+    },
+    {
+      "recording_id": "session-B",
+      "split": "val",
+      "input":  {"path": "noisy_B.u16",  "sha256": "..."},
+      "target": {"path": "reference_B.u16", "sha256": "...", "target_kind": "trusted_external_reference", "same_count_domain": true, "alignment_attested": true, "description": "..."},
+      "pairs": [{"frame_index": 3}]
+    }
+  ],
+  "_notes": [
+    "Compute hashes with: shasum -a 256 FILE",
+    "Recordings are grouped by recording_id; a recording (or any file hash) may appear in ONE split only.",
+    "Use a 'test' split only for a final, untouched evaluation; it is stored separately and gated.",
+    "Keys beginning with _ are ignored comments."
+  ]
+}

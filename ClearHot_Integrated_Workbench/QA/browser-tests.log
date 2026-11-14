@@ -1,0 +1,10 @@
+PASS delivered HTML: unchanged Argos 2 default parity; tuning changes pixels; original stays fixed; preset survives reload; frozen 13-candidate review and recorded parameters; method-specific controls; two experimental players; no HTTP/errors
+PASS synthetic fabricated BE+shift source / LE cache, 65 frames, final identity, unapproved label, bypass, wrong-source rejection; no HTTP/errors
+initial Frame 0 loaded. Review ROI positions before running.
+run Frame 0 complete. Rate candidates before revealing names, then record.
+export methods 12
+PASS freeze, draw ROI, run 12, blind labels, score, record, export, consecutive frame delta, reveal, no network, no page errors
+640x512 local file: frames: 2 whole frames · 0 leftover bytes · 14-bit mask · 640×512 · reference 5500–7500
+640x512 result canvases: 12
+PASS file load, local SHA-256, 12 full-res methods, metadata export/import with ROI restoration, verified hash, no network/errors
+PASS 5-frame local playback, Argos 2, no skipped frames, end, seek, show frame, restart, raw, pause, auto-window, no network/errors

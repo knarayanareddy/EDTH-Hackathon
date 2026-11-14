@@ -1,0 +1,127 @@
+$ npm ci --ignore-scripts --no-audit --no-fund
+
+added 3 packages in 595ms
+$ npm run build
+
+> clearhot-integrated-workbench@0.1.0 build
+> node build.mjs
+
+Built self-contained ClearHot_Local.html
+$ npm run typecheck
+
+> clearhot-integrated-workbench@0.1.0 typecheck
+> tsc --noEmit
+
+$ npm test
+
+> clearhot-integrated-workbench@0.1.0 test
+> node --test tests/*.test.mjs
+
+TAP version 13
+# Subtest: Argos 2 engine is byte-identical to the archived original and defaults are the original ones
+ok 1 - Argos 2 engine is byte-identical to the archived original and defaults are the original ones
+  ---
+  duration_ms: 6.64228
+  ...
+# Subtest: Argos 2 parity against the ARCHIVED engine incl. sequential reset and seek
+ok 2 - Argos 2 parity against the ARCHIVED engine incl. sequential reset and seek
+  ---
+  duration_ms: 114.99784
+  ...
+# Subtest: all original six methods plus lab are selectable and run on the same decoded frame
+ok 3 - all original six methods plus lab are selectable and run on the same decoded frame
+  ---
+  duration_ms: 121.926887
+  ...
+# Subtest: strict decoding: short buffers/frames throw, no zero padding, indices validated
+ok 4 - strict decoding: short buffers/frames throw, no zero padding, indices validated
+  ---
+  duration_ms: 3.161816
+  ...
+# Subtest: playback: >60 generated frames, exact frame identity, seek/restart resets temporal state
+ok 5 - playback: >60 generated frames, exact frame identity, seek/restart resets temporal state
+  ---
+  duration_ms: 249.637387
+  ...
+# Subtest: CNN cache manifest parsing and compatibility checks reject mismatches
+ok 6 - CNN cache manifest parsing and compatibility checks reject mismatches
+  ---
+  duration_ms: 1.768401
+  ...
+# Subtest: viewer logic on the Python-generated recording + approved-model cache (frames beyond 60, Argos 2 beside CNN)
+ok 7 - viewer logic on the Python-generated recording + approved-model cache (frames beyond 60, Argos 2 beside CNN) # SKIP run training tests first (scripts/run_all_tests.sh) to create build/e2e
+  ---
+  duration_ms: 0.11088
+  ...
+# Subtest: offline by construction: CSP blocks connections and no network primitives in shipped viewer/source
+ok 8 - offline by construction: CSP blocks connections and no network primitives in shipped viewer/source
+  ---
+  duration_ms: 1.301122
+  ...
+# Subtest: decoder limits enforce compatible 14-bit and dimensions
+ok 9 - decoder limits enforce compatible 14-bit and dimensions
+  ---
+  duration_ms: 1.396355
+  ...
+# Subtest: shared decoder decodes endian and shifted 14-bit field
+ok 10 - shared decoder decodes endian and shifted 14-bit field
+  ---
+  duration_ms: 0.783997
+  ...
+# Subtest: header, frame count, slice and remainder
+ok 11 - header, frame count, slice and remainder
+  ---
+  duration_ms: 3.863283
+  ...
+# Subtest: reference is monotone and clips to same fixed window
+ok 12 - reference is monotone and clips to same fixed window
+  ---
+  duration_ms: 0.406353
+  ...
+# Subtest: ROI reports descriptive numbers and no universal verdict
+ok 13 - ROI reports descriptive numbers and no universal verdict
+  ---
+  duration_ms: 0.69772
+  ...
+# Subtest: all 12 configurations produce deterministic 8-bit images on the same 14-bit fixture
+ok 14 - all 12 configurations produce deterministic 8-bit images on the same 14-bit fixture
+  ---
+  duration_ms: 309.326651
+  ...
+# Subtest: original Claude B uses future samples at frame 0 (documented offline look-ahead)
+ok 15 - original Claude B uses future samples at frame 0 (documented offline look-ahead)
+  ---
+  duration_ms: 13.662291
+  ...
+# Subtest: Argos 2 stage configs and lab variants differ as intended
+ok 16 - Argos 2 stage configs and lab variants differ as intended
+  ---
+  duration_ms: 0.382153
+  ...
+# Subtest: stage bypass and detail variants affect a structured fixture
+ok 17 - stage bypass and detail variants affect a structured fixture
+  ---
+  duration_ms: 41.859209
+  ...
+# Subtest: sequential method runner resets on seek and matches fresh render on that frame
+ok 18 - sequential method runner resets on seek and matches fresh render on that frame
+  ---
+  duration_ms: 213.934406
+  ...
+# Subtest: experimental variants are separate, finite and reset after seek
+ok 19 - experimental variants are separate, finite and reset after seek
+  ---
+  duration_ms: 46.024537
+  ...
+1..19
+# tests 19
+# suites 0
+# pass 18
+# fail 0
+# cancelled 0
+# skipped 1
+# todo 0
+# duration_ms 1359.490521
+$ sha256sum fresh/original built HTML
+04536120e82615b495e55bfa99d813732f84d42e201936be13b6a7a35b7d745b  ClearHot_Local.html
+04536120e82615b495e55bfa99d813732f84d42e201936be13b6a7a35b7d745b  /home/user/ClearHot_Integrated_Workbench/ClearHot_Local.html
